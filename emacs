@@ -1,20 +1,26 @@
+;; General settings
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+(menu-bar-mode -1)
+(toggle-scroll-bar -1)
+(tool-bar-mode -1)
+
+(setq visible-bell t
+      inhibit-startup-screen t
+      make-backup-files nil)
+
+
+;; Manage packages
 (require 'package)
 
 ;; Add MELPA to package archives.
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/"))
 
+(setq package-selected-packages '(org evil auctex))
+
 (package-initialize)
 
-;; General settings
-(setq visible-bell t
-      inhibit-startup-screen t
-      make-backup-files nil
-      package-selected-packages '(org evil auctex))
 
-(menu-bar-mode -1)
-(toggle-scroll-bar -1)
-(tool-bar-mode -1)
 
 ;; Enable Evil
 (require 'evil)
