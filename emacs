@@ -35,7 +35,9 @@
 
 ;; Variables
 (setq org-hide-leading-stars t
-      org-agenda-files '("~/org/gtd.org"))
+      org-agenda-files '("~/.org/gtd.org")
+      org-default-notes-file "~/.org/gtd.org"
+      org-refile-targets '("~/.org/gtd.org"))
 
 ;; Hooks
 (add-hook 'org-mode-hook 'auto-fill-mode)
