@@ -4,9 +4,14 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
+(defun choose-initial-buffer ()
+  (if (= 1 (length command-line-args))
+      "~/.org/gtd.org" nil))
+
 (setq visible-bell t
       inhibit-startup-screen t
-      make-backup-files nil)
+      make-backup-files nil
+      initial-buffer-choice (choose-initial-buffer))
 
 
 ;; Manage packages
@@ -32,6 +37,7 @@
 ;; Keybindings
 (global-set-key (kbd "C-C c") 'org-capture)
 (global-set-key (kbd "C-c a") 'org-agenda)
+
 
 ;; Variables
 (setq org-hide-leading-stars t
