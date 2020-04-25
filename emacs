@@ -18,9 +18,9 @@
 (require 'package)
 
 ;; Add MELPA to package archives.
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/"))
-
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+(setq package-pinned-packages '((org . "org")))
 (setq package-selected-packages '(org evil auctex))
 
 (package-initialize)
