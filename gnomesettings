@@ -1,6 +1,16 @@
+# Terminal settings
+gsettings set org.gnome.Terminal.Legacy.Settings headerbar "@mb false"
+gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
+gsettings set org.gnome.Terminal.Legacy.Profile:/ audible-bell false
+gsettings set org.gnome.Terminal.Legacy.Profile:/ scrollback-unlimited false
+gsettings set org.gnome.Terminal.Legacy.Profile:/ scrollbar-policy "never"
+gsettings set org.gnome.Terminal.Legacy.Profile:/ visible-name "imyp"
+# Extensions
+gsettings set org.gnome.shell enabled-extensions "['desktop-icons@csoriano', 'pixel-saver@deadalnix.me', 'hidetopbar@mathieu.bidon.ca']"
+# Desktop icons
+gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
+gsettings set org.gnome.shell.extensions.desktop-icons show-home false
+# Dash to dock
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
 gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false
-gsettings set org.gnome.Terminal.Legacy.Settings headerbar "@mb false"
-gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
-gsettings set org.gnome.shell.extensions.desktop-icons show-home false
