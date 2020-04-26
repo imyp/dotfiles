@@ -116,11 +116,23 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [ -f ~/.tex_envs ]; then
-    . ~/.tex_envs
-fi
-MANPATH=/home/inti/opt/texlive/2020/texmf
-
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   tmux
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/inti/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/inti/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/inti/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/inti/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH="$HOME/opt/bin:$PATH"
