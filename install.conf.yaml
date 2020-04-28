@@ -16,6 +16,8 @@
     - ~/.org
     - ~/.config
     - ~/.config/autostart
+    - ~/opt
+
 
 - link:
     ~/.config/autostart/gnome-terminal.desktop: gnome-terminal.desktop
