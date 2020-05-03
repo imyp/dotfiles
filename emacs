@@ -3,6 +3,7 @@
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
+(column-number-mode 1)
 
 (defun choose-initial-buffer ()
   (if (= 1 (length command-line-args))
