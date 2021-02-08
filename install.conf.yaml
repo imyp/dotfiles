@@ -5,22 +5,10 @@
 - clean: ['~']
 
 - link:
-    ~/.dotfiles: ''
     ~/.tmux.conf: tmux.conf
     ~/.emacs: emacs
-    ~/.gnomesettings: gnomesettings
     ~/.bashrc: bashrc
     ~/.profile: profile
-
-- create:
-    - ~/.org
-    - ~/.config
-    - ~/.config/autostart
-    - ~/opt
-
-
-- link:
-    ~/.config/autostart/gnome-terminal.desktop: gnome-terminal.desktop
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
